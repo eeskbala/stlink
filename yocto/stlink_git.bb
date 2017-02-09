@@ -8,7 +8,7 @@ PR = "r0"
 
 SRCREV = "${AUTOREV}"
 
-SRC_URI = "git://github.com/texane/stlink.git;branch=master"
+SRC_URI = "git://github.com/eeskbala/stlink.git;branch=master"
 
 S = "${WORKDIR}/git"
 BBCLASSEXTEND = "native"
