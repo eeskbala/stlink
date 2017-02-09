@@ -102,10 +102,6 @@ else()
 	target_link_libraries(${STLINK_LIB_SHARED} ${LIBUSB_LIBRARY})
 endif()
 
-install(TARGETS ${STLINK_LIB_SHARED}
-	DESTINATION lib/${CMAKE_LIBRARY_PATH}
-)
-
 ###
 # Static library
 ###
@@ -132,10 +128,6 @@ endif()
 
 set_target_properties(${STLINK_LIB_STATIC} PROPERTIES OUTPUT_NAME ${PROJECT_NAME})
 
-install(TARGETS ${STLINK_LIB_STATIC}
-	ARCHIVE DESTINATION lib/${CMAKE_LIBRARY_PATH}
-)
-
 ###
 # Tools
 ###
@@ -152,10 +144,6 @@ if (WIN32 OR APPLE)
 else()
 	target_link_libraries(st-info ${STLINK_LIB_SHARED})
 endif()
-
-install(TARGETS st-flash st-info
-	RUNTIME DESTINATION bin
-)
 
 if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
 	file(GLOB RULES_FILES etc/udev/rules.d/*.rules)

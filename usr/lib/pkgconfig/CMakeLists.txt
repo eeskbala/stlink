@@ -8,7 +8,3 @@ configure_file(
 	"${CMAKE_CURRENT_SOURCE_DIR}/pkg-config.pc.cmake"
 	"${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.pc"
 )
-
-install(FILES "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.pc"
-	DESTINATION lib/${CMAKE_LIBRARY_PATH}/pkgconfig/
-)
